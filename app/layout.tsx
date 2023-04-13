@@ -1,5 +1,8 @@
 import Head from 'next/head';
-import './styles/globals.css';
+
+// local components
+import HeaderComponent from './components/header/HeaderComponent';
+import GlobalStyle from './styles/global';
 
 export const metadata = {
   title: 'Oliveira Persianas',
@@ -16,7 +19,11 @@ export default function RootLayout({
       <Head>
         <title>{metadata.title}</title>
       </Head>
-      <body>{children}</body>
+      <body>
+        <GlobalStyle />
+        <HeaderComponent />
+        {children}
+      </body>
     </html>
   )
 }
