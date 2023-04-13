@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
-import { colors, sansFont } from '@/app/styles/global';
+import { colors } from '@/app/styles/global';
 import { usePathname } from "next/navigation"
 
 
 const Wrapper = styled.header<{ display: boolean }>`
   width: 100%;
-  padding: 1.6rem 13rem;
-  display: ${({ display }) => display ? 'flex' : 'none'};
+  padding: 1.6rem 8rem;
+  display: ${({ display }) => !display ? 'none' : 'flex'};
   align-items: center;
   justify-content: space-between;
 
@@ -52,12 +52,11 @@ const HeaderComponent = () => {
 
   useEffect(() => {
     if (pathname === '/') {
-      setShowheader(false);
+      setShowheader(!showHeader);
       return;
     }
 
   }, [pathname]);
-
 
   return (
     <Wrapper display={showHeader}>
