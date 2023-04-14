@@ -53,7 +53,7 @@ const HeaderComponent = () => {
   const path = usePathname();
   const [displayHeader, setDisplayHeader] = useState(path);
 
-  const handleScrollHeader = ({ target }: Event) => {
+  const handleScrollHeader = () => {
     const windowScrollY = window.scrollY;
 
     if (windowScrollY >= 60) {
@@ -67,10 +67,11 @@ const HeaderComponent = () => {
 
   useEffect(() => {
     const display = path === '/' ? 'none' : 'flex';
+    const removeEvent = window.removeEventListener("scroll", handleScrollHeader);
     setDisplayHeader(display);
 
-    window.addEventListener("scroll", (event) => handleScrollHeader(event));
-    // return window.removeEventListener("scroll", handleScrollHeader);
+    window.addEventListener("scroll", handleScrollHeader);
+    return removeEvent;
   }, [path]);
 
   useEffect(() => {
