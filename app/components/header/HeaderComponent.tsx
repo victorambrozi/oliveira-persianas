@@ -7,15 +7,18 @@ import { colors } from '@/app/styles/global';
 import { usePathname } from "next/navigation"
 
 
-const Wrapper = styled.header<{ display: boolean }>`
+const Wrapper = styled.header<{ display: string }>`
   width: 100%;
   padding: 1.6rem 8rem;
-  display: ${({ display }) => !display ? 'none' : 'flex'};
+  display: ${({ display }) => display};
   align-items: center;
   justify-content: space-between;
 
   background-color: ${colors.greyOne};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  position: fixed;
+  z-index: 5;
 `;
 
 const Logo = styled.div`
@@ -46,20 +49,45 @@ const Nav = styled.nav`
 `;
 
 const HeaderComponent = () => {
-  const [showHeader, setShowheader] = useState(true);
+  const [showHeader, setShowheader] = useState(false);
   const path = usePathname();
-  const [pathname, setPathame] = useState(path);
+  const [displayHeader, setDisplayHeader] = useState(path);
+
+  const handleScrollHeader = ({ target }: Event) => {
+    const windowScrollY = window.scrollY;
+
+    if (windowScrollY >= 60) {
+      setDisplayHeader('flex')
+      setShowheader(true);
+    } else {
+      setDisplayHeader('none');
+      setShowheader(false)
+    }
+  }
 
   useEffect(() => {
-    if (pathname === '/') {
-      setShowheader(!showHeader);
-      return;
+    const display = path === '/' ? 'none' : 'flex';
+    setDisplayHeader(display);
+
+    window.addEventListener("scroll", (event) => handleScrollHeader(event));
+    // return window.removeEventListener("scroll", handleScrollHeader);
+  }, [path]);
+
+  useEffect(() => {
+    switch (displayHeader) {
+      case 'flex':
+        setShowheader(true);
+        break;
+      case 'none':
+        setShowheader(!showHeader);
+        break;
     }
 
-  }, [pathname]);
+  }, [displayHeader]);
+
 
   return (
-    <Wrapper display={showHeader}>
+    <Wrapper display={displayHeader}>
       <Logo>LOGO</Logo>
       <Nav>
         <Link href={"/"}>Home</Link>
