@@ -5,11 +5,15 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { colors } from '@/app/styles/global';
 import { usePathname } from "next/navigation"
+import Image from 'next/image';
+
+// assets
+import logo from "../../../public/logo.svg";
 
 
 const Wrapper = styled.header<{ display: string }>`
   width: 100%;
-  padding: 1.6rem 8rem;
+  padding: 2rem 8rem;
   display: ${({ display }) => display};
   align-items: center;
   justify-content: space-between;
@@ -22,13 +26,16 @@ const Wrapper = styled.header<{ display: string }>`
 `;
 
 const Logo = styled.div`
-  width: 180px;
-  height: 60px;
+  width: 100%;
+  max-width: 18rem;
 
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > a > img  {
+    height: auto;
+  }
 `;
 
 const Nav = styled.nav`
@@ -89,7 +96,11 @@ const HeaderComponent = () => {
 
   return (
     <Wrapper display={displayHeader}>
-      <Logo>LOGO</Logo>
+      <Logo>
+        <Link href={'/'}>
+          <Image src={logo} alt='Logo da empresa' />
+        </Link>
+      </Logo>
       <Nav>
         <Link href={"/"}>Home</Link>
         <Link href={"/about"}>Sobre</Link>
