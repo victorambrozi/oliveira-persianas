@@ -56,7 +56,7 @@ const HeaderComponent = () => {
   const handleScrollHeader = () => {
     const windowScrollY = window.scrollY;
 
-    if (windowScrollY >= 60) {
+    if (windowScrollY >= 100) {
       setDisplayHeader('flex')
       setShowheader(true);
     } else {
