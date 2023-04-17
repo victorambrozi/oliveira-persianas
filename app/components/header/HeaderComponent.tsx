@@ -21,13 +21,13 @@ const Wrapper = styled.header<{ display: string }>`
   background-color: ${colors.greyOne};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-  position: fixed;
+  position: fixed; 
   z-index: 5;
 `;
 
 const Logo = styled.div`
   width: 100%;
-  max-width: 18rem;
+  max-width: 15rem;
 
   display: flex;
   justify-content: center;
