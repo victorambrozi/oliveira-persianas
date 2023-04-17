@@ -66,6 +66,7 @@ const ProductCard = styled.div`
         p {
             text-transform: uppercase;
             text-align: center;
+            color: ${colors.greyTwo};
         }
 
         &:hover {
