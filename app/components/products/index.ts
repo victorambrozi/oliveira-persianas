@@ -1,1 +1,3 @@
-export { default as ProductComponent } from "./ProductComponent";
+import { default as ProductComponent } from "./ProductComponent";
+
+export default ProductComponent;

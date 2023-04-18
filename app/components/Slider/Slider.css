@@ -1,0 +1,20 @@
+.swiper {
+  padding: 2rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.swiper-pagination {
+    margin-top: 1rem;
+    position: initial;
+}
+.swiper-pagination-bullet-active {
+  background-color: #800000;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #006614;
+}

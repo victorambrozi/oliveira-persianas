@@ -1,15 +1,16 @@
 "use client";
 import styled from "styled-components";
-import { colors, sansFont, serifFont } from "./styles/global";
+import Image from "next/image";
+import ServicesComponent from "./components/services/index";
 
 // assets
 import { FaAngleDoubleDown } from 'react-icons/fa'
 import bgMain from "../public/bg-intro__intro.svg"
-import { ProductComponent } from "./components/products";
+import  ProductComponent  from "./components/products/index";
 
 // global components styled-components
+import { colors, sansFont, serifFont } from "./styles/global";
 import { Text } from "./styles/global";
-import Image from "next/image";
 
 const Intro = styled.section`
   width: 100%;
@@ -72,6 +73,7 @@ export default function Home() {
         </Icon>
       </Intro>
       <ProductComponent />
+      <ServicesComponent /> 
     </main>
   )
 }
