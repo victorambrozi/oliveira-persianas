@@ -12,12 +12,35 @@ import { Title } from '@/app/styles/global';
 
 const Section = styled.section`
     width: 100%;
-    padding: 0 8rem;
+    padding: 0 8rem 6rem 8rem;
     background-color: ${colors.greyThree};
 
 
     h2 {
         padding-top: 6rem;
+    }
+
+    a {
+      margin: 6rem auto 0 auto;
+      padding: 2rem 4rem;
+      width: 100%;
+      max-width: 28rem;
+      
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+
+      background: ${colors.redGradient};
+      color: ${colors.greyTwo};
+
+      border-radius: 1rem;
+      transition: .4s;
+
+      &:hover {
+        filter: brightness(1.2)
+      }
     }
 `;
 
@@ -47,43 +70,31 @@ const ServicesItem = styled.div`
 `;
 const Carrousel = styled.div`
   width: 100%;
-  height: 600px;
   margin-top: 3.6rem;
 `;
-const Button = styled.div``;
+const Button = styled.div`
+
+`;
 
 const ServicesComponent = () => {
+  const servicesItems = ['Instalação', 'Lavagem', 'Vendas', 'Manutenção corretiva', 'Manutenção preventiva',]
 
   return (
     <Section>
       <Title color={colors.greySix}> Serviços </Title>
       <ServicesContainer>
-        <ServicesItem>
-          <BiTargetLock size={40} color={colors.greySix} />
-          <p>Instalação</p>
-        </ServicesItem>
-        <ServicesItem>
-          <BiTargetLock size={40} color={colors.greySix} />
-          <p>Lavagem</p>
-        </ServicesItem>
-        <ServicesItem>
-          <BiTargetLock size={40} color={colors.greySix} />
-          <p>Vendas</p>
-        </ServicesItem>
-        <ServicesItem>
-          <BiTargetLock size={40} color={colors.greySix} />
-          <p>MAnutenção corretiva</p>
-        </ServicesItem>
-        <ServicesItem>
-          <BiTargetLock size={40} color={colors.greySix} />
-          <p>Manutenção preventiva</p>
-        </ServicesItem>
+        {servicesItems.map(item => (
+          <ServicesItem>
+            <BiTargetLock size={40} color={colors.greySix} />
+            <p>{item}</p>
+          </ServicesItem>
+        ))}
       </ServicesContainer>
       <Carrousel>
         <Slider />
       </Carrousel>
       <Button>
-        <Link href={'/contact'} />
+        <Link href={'/contact'}>Entre em contato</Link>
       </Button>
     </Section>
   )

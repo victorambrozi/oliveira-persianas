@@ -10,12 +10,13 @@
   border-radius: 1rem;
   overflow: hidden;
   filter: blur(3px);
+  border: 3px solid #1B2620;
+
   transition: all ease-in-out .4s;
 }
 
 .swiper-slide-active {
   filter: blur(0);
-  border: 3px solid #1B2620;
 
 }
 .swiper-pagination {
