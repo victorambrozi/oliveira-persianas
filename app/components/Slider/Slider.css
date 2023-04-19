@@ -5,6 +5,18 @@
 .swiper-slide {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  filter: blur(3px);
+  transition: all ease-in-out .4s;
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+  border: 3px solid #1B2620;
+
 }
 .swiper-pagination {
     margin-top: 1rem;
