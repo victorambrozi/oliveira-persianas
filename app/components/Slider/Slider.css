@@ -3,6 +3,7 @@
 }
 
 .swiper-slide {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,18 +11,17 @@
   border-radius: 1rem;
   overflow: hidden;
   filter: blur(3px);
-  border: 3px solid #1B2620;
+  border: 3px solid #1b2620;
 
-  transition: all ease-in-out .4s;
+  transition: all ease-in-out 0.4s;
 }
 
 .swiper-slide-active {
   filter: blur(0);
-
 }
 .swiper-pagination {
-    margin-top: 1rem;
-    position: initial;
+  margin-top: 1rem;
+  position: initial;
 }
 .swiper-pagination-bullet-active {
   background-color: #800000;

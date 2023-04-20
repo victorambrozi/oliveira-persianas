@@ -28,12 +28,11 @@ import './Slider.css';
 
 const ImageContainer = styled.div`
     width: 100%;
-		height: 21rem;
 
     > img {
-        width: 100%;
-		height: 100%;
-        object-fit: cover;
+      width: 100%;
+		  height: 100%;
+      object-fit: contain;
     }
 
 `
@@ -42,8 +41,6 @@ const Slider = () => {
   const imagesSlider = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10];
   const settings: SwiperProps = {
     modules: [Navigation, Pagination, A11y, Autoplay],
-    slidesPerView: 4,
-    spaceBetween: 30,
     navigation: true,
     pagination: {
       clickable: true,
@@ -55,6 +52,24 @@ const Slider = () => {
       delay: 2500,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      320: { // width >= 320px
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      740: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    }
   }
 
   return (

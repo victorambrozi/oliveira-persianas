@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import { BiTargetLock } from "react-icons/bi";
-import Slider from '../Slider/Slider';
+import Slider from '../Slider/index';
 
 // global components styled-components
 import { colors } from '@/app/styles/global';
