@@ -83,7 +83,7 @@ const ServicesComponent = () => {
       <Subtitle color={colors.greySix}> Serviços </Subtitle>
       <ServicesContainer>
         {servicesItems.map(item => (
-          <ServicesItem>
+          <ServicesItem key={item}>
             <BiTargetLock size={40} color={colors.greySix} />
             <p>{item}</p>
           </ServicesItem>

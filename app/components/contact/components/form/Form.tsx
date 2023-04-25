@@ -1,7 +1,13 @@
-import { colors } from '@/app/styles/global';
 import React from 'react';
-
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import styled from 'styled-components';
+
+import { colors } from '@/app/styles/global';
+
+import { schema, FormProps } from './index';
+import { MessageError } from '../MessageError/index';
+
 
 const FormWrapper = styled.form`
   width: 100%;
@@ -52,6 +58,7 @@ const TextArea = styled.textarea`
 const Submit = styled.button`
   width: 100%;
   max-width: 18vw;
+  min-width: 10rem;
 
   margin-top: 2.8rem;
   padding: 2rem 1.4rem;
@@ -78,19 +85,34 @@ const Submit = styled.button`
 
 
 const Form = () => {
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormProps>({
+    mode: 'all',
+    reValidateMode: 'onChange',
+    resolver: zodResolver(schema)
+  });
+
+  const onSubmit = (data: FormProps) => {
+    reset();
+    console.log(data)
+  }
   return (
-    <FormWrapper>
+    <FormWrapper onSubmit={handleSubmit(onSubmit)}>
       <Label>nome</Label>
-      <Input />
+      <Input {...register('name')} type='text' />
+      {errors.name?.message && <MessageError message={errors.name.message} />}
 
       <Label>email</Label>
-      <Input />
+      <Input {...register('email')} type='email' />
+      {errors.email?.message && <MessageError message={errors.email.message} />}
 
       <Label>telefone</Label>
-      <Input />
+      <Input {...register('phone')} type='text' />
+      {errors.phone?.message && <MessageError message={errors.phone.message} />}
 
       <Label>mensagem</Label>
-      <TextArea />
+      <TextArea {...register('message')} />
+      {errors.message?.message && <MessageError message={errors.message.message} />}
+
       <Submit type='submit'>Enviar</Submit>
 
     </FormWrapper>

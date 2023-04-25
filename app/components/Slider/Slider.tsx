@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useId } from 'react'
 import styled from 'styled-components';
 import Image from 'next/image';
 
@@ -77,7 +77,7 @@ const Slider = () => {
       {...settings}
     >
       {imagesSlider.map(image => (
-        <SwiperSlide>
+        <SwiperSlide key={useId()}>
           <ImageContainer>
             <Image src={image} alt='Imagem slider' />
           </ImageContainer>

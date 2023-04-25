@@ -3,7 +3,7 @@ import React from 'react';
 import { Subtitle, Text } from '@/app/styles/styled/index';
 import { colors } from '@/app/styles/global';
 import styled from 'styled-components';
-import Form from './components/form/index';
+import { Form } from './components/form/index';
 
 const Section = styled.section`
     padding: 6rem 8rem;
