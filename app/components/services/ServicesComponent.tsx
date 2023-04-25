@@ -6,7 +6,7 @@ import Slider from '../Slider/index';
 
 // global components styled-components
 import { colors } from '@/app/styles/global';
-import { Subtitle } from '@/app/styles/global';
+import { Subtitle } from '@/app/styles/styled/index';
 
 
 

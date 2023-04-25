@@ -1,18 +1,19 @@
 "use client";
 import styled from "styled-components";
 import ServicesComponent from "./components/services/index";
+import ProductComponent from "./components/products/index";
+import ContactComponent from "./components/contact/index";
+import Image from "next/image";
 
 // assets
 import { FaAngleDoubleDown } from 'react-icons/fa'
-import ProductComponent from "./components/products/index";
 import cepe from "../public/images/clientsLogo/logo-cepe.svg"
 import andes from "../public/images/clientsLogo/logo-andes.svg"
 import faeb from "../public/images/clientsLogo/logo-faeb.svg"
 
 // global components styled-components
 import { colors, sansFont, serifFont } from "./styles/global";
-import { Text, Subtitle } from "./styles/global";
-import Image from "next/image";
+import { Text, Subtitle } from "./styles/styled/index";
 
 
 const Intro = styled.section`
@@ -26,19 +27,6 @@ const Intro = styled.section`
   background-image: url("/images/bg-intro__intro.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  
-  
-  > img {
-    width: 100%;
-    height: 100%;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    object-fit: cover;
-    z-index: -1;
-  }
 
   p {
     margin-top: 2rem;
@@ -155,8 +143,8 @@ export default function Home() {
           <Image src={cepe} alt="Logo da empresa cliente"/>
           <Image src={andes} alt="Logo da empresa cliente"/>
         </Content>
-
       </ClientUs>
+      <ContactComponent />
     </main>
   )
 }

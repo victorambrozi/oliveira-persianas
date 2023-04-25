@@ -1,4 +1,4 @@
-import { Subtitle, colors } from '@/app/styles/global';
+import { colors } from '@/app/styles/global';
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
@@ -10,7 +10,7 @@ import bHorizontal from "../../../public/images/products/p-horizontal__produtos.
 import special from "../../../public/images/products/l-especial__produtos.svg";
 
 // global components styled-components
-import { Text } from '@/app/styles/global';
+import { Text, Subtitle } from '@/app/styles/styled/index';
 
 const Section = styled.section`
     width: 100%;
