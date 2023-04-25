@@ -1,13 +1,13 @@
-import { Title, colors } from '@/app/styles/global';
+import { Subtitle, colors } from '@/app/styles/global';
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
 // assets
-import woven from "../../../public/products/c-tecido__produtos.svg";
-import bVertical from "../../../public/products/p-vertical__produtos.svg";
-import bHorizontal from "../../../public/products/p-horizontal__produtos.svg";
-import special from "../../../public/products/l-especial__produtos.svg";
+import woven from "../../../public/images/products/c-tecido__produtos.svg";
+import bVertical from "../../../public/images/products/p-vertical__produtos.svg";
+import bHorizontal from "../../../public/images/products/p-horizontal__produtos.svg";
+import special from "../../../public/images/products/l-especial__produtos.svg";
 
 // global components styled-components
 import { Text } from '@/app/styles/global';
@@ -78,7 +78,7 @@ const ProductCard = styled.div`
 const ProductComponent = () => {
     return (
         <Section>
-            <Title color={colors.greyTwo}>Produtos</Title>
+            <Subtitle color={colors.greyTwo}>Produtos</Subtitle>
             <CardContainer>
                 <ProductCard>
                     <Image src={woven} alt='Cortina de Tecido' />

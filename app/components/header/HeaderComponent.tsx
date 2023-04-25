@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation"
 import Image from 'next/image';
 
 // assets
-import logo from "../../../public/logo.svg";
+import logo from "../../../public/images/logo.svg";
 
 
 const Wrapper = styled.header<{ display: string }>`

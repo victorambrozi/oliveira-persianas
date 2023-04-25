@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 // assets
-import slider1 from "../../../public/slider/img-carrousel.svg";
-import slider2 from "../../../public/slider/img-carrousel1.svg";
-import slider3 from "../../../public/slider/img-carrousel2.svg";
-import slider4 from "../../../public/slider/img-carrousel3.svg";
-import slider5 from "../../../public/slider/img-carrousel4.svg";
-import slider6 from "../../../public/slider/img-carrousel5.svg";
-import slider7 from "../../../public/slider/img-carrousel6.svg";
-import slider8 from "../../../public/slider/img-carrousel7.svg";
-import slider9 from "../../../public/slider/img-carrousel8.svg";
-import slider10 from "../../../public/slider/img-carrousel9.svg";
+import slider1 from "../../../public/images/slider/img-carrousel.svg";
+import slider2 from "../../../public/images/slider/img-carrousel1.svg";
+import slider3 from "../../../public/images/slider/img-carrousel2.svg";
+import slider4 from "../../../public/images/slider/img-carrousel3.svg";
+import slider5 from "../../../public/images/slider/img-carrousel4.svg";
+import slider6 from "../../../public/images/slider/img-carrousel5.svg";
+import slider7 from "../../../public/images/slider/img-carrousel6.svg";
+import slider8 from "../../../public/images/slider/img-carrousel7.svg";
+import slider9 from "../../../public/images/slider/img-carrousel8.svg";
+import slider10 from "../../../public/images/slider/img-carrousel9.svg";
 
 // swiper
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';

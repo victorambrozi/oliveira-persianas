@@ -63,7 +63,7 @@ export const colors: Colors = {
   redGradient: 'linear-gradient(92.63deg, #800000 0%, #990000 100%);',
 }
 
-export const Title = styled.h2 < { color: string }> `
+export const Subtitle = styled.h2 < { color: string }> `
   font-size: clamp(3.6rem, 1vw, 14rem);
   font-weight: 600;
   font-family: ${serifFont.style.fontFamily};

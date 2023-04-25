@@ -6,7 +6,7 @@ import Slider from '../Slider/index';
 
 // global components styled-components
 import { colors } from '@/app/styles/global';
-import { Title } from '@/app/styles/global';
+import { Subtitle } from '@/app/styles/global';
 
 
 
@@ -18,29 +18,6 @@ const Section = styled.section`
 
     h2 {
         padding-top: 6rem;
-    }
-
-    a {
-      margin: 6rem auto 0 auto;
-      padding: 2rem 4rem;
-      width: 100%;
-      max-width: 28rem;
-      
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 500;
-
-      background: ${colors.redGradient};
-      color: ${colors.greyTwo};
-
-      border-radius: 1rem;
-      transition: .4s;
-
-      &:hover {
-        filter: brightness(1.2)
-      }
     }
 `;
 
@@ -73,15 +50,37 @@ const Carrousel = styled.div`
   margin-top: 3.6rem;
 `;
 const Button = styled.div`
+  a {
+        margin: 6rem auto 0 auto;
+        padding: 2rem 4rem;
+        width: 100%;
+        max-width: 28rem;
+        
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 500;
 
+        background: ${colors.redGradient};
+        color: ${colors.greyTwo};
+
+        border-radius: 1rem;
+        transition: .4s;
+
+        &:hover {
+          filter: brightness(1.2)
+        }
+    }
 `;
+
 
 const ServicesComponent = () => {
   const servicesItems = ['Instalação', 'Lavagem', 'Vendas', 'Manutenção corretiva', 'Manutenção preventiva',]
 
   return (
     <Section>
-      <Title color={colors.greySix}> Serviços </Title>
+      <Subtitle color={colors.greySix}> Serviços </Subtitle>
       <ServicesContainer>
         {servicesItems.map(item => (
           <ServicesItem>
