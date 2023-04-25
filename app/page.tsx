@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import ServicesComponent from "./components/services/index";
 import ProductComponent from "./components/products/index";
-import ContactComponent from "./components/contact/index";
+import { ContactComponent } from "./components/contact/index";
 import Image from "next/image";
 
 // assets
@@ -134,14 +134,14 @@ export default function Home() {
           Nossos Clientes
         </Subtitle>
         <Content>
-          <Image src={cepe} alt="Logo da empresa cliente"/>
-          <Image src={andes} alt="Logo da empresa cliente"/>
-          <Image src={faeb} alt="Logo da empresa cliente"/>
-          <Image src={cepe} alt="Logo da empresa cliente"/>
-          <Image src={andes} alt="Logo da empresa cliente"/>
-          <Image src={faeb} alt="Logo da empresa cliente"/>
-          <Image src={cepe} alt="Logo da empresa cliente"/>
-          <Image src={andes} alt="Logo da empresa cliente"/>
+          <Image src={cepe} alt="Logo da empresa cliente" />
+          <Image src={andes} alt="Logo da empresa cliente" />
+          <Image src={faeb} alt="Logo da empresa cliente" />
+          <Image src={cepe} alt="Logo da empresa cliente" />
+          <Image src={andes} alt="Logo da empresa cliente" />
+          <Image src={faeb} alt="Logo da empresa cliente" />
+          <Image src={cepe} alt="Logo da empresa cliente" />
+          <Image src={andes} alt="Logo da empresa cliente" />
         </Content>
       </ClientUs>
       <ContactComponent />
