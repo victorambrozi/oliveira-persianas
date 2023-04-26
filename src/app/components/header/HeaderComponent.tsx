@@ -11,7 +11,7 @@ import Image from 'next/image';
 import logo from "../../../../public/images/logo.svg";
 
 
-const Wrapper = styled.header<{ display: string }>`
+const Wrapper = styled.header<{ display: string | null }>`
   width: 100%;
   padding: 2rem 8rem;
   display: ${({ display }) => display};
@@ -63,14 +63,20 @@ const HeaderComponent = () => {
   const handleScrollHeader = () => {
     const windowScrollY = window.scrollY;
 
-    if (windowScrollY >= 100) {
-      setDisplayHeader('flex')
+    if (path != '/') {
+      setDisplayHeader('flex');
       setShowheader(true);
     } else {
-      setDisplayHeader('none');
-      setShowheader(false)
+      if (windowScrollY >= 100) {
+        setDisplayHeader('flex')
+        setShowheader(true);
+      } else {
+        setDisplayHeader('none');
+        setShowheader(false)
+      }
     }
   }
+
 
   useEffect(() => {
     const display = path === '/' ? 'none' : 'flex';

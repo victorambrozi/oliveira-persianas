@@ -14,14 +14,14 @@ const Container = styled.footer`
 `;
 const Content = styled.div`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 const AboutMe = styled.div`
-   display: flex;
+  display: flex;
   align-items: center;
   gap: 2rem;
 `;
