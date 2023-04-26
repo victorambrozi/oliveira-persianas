@@ -3,6 +3,7 @@ import Head from 'next/head';
 // local components
 import HeaderComponent from './components/header/HeaderComponent';
 import GlobalStyle from './styles/global';
+import Footer from './components/footer/index';
 
 export const metadata = {
   title: 'Oliveira Persianas',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <GlobalStyle />
         <HeaderComponent />
         {children}
+        <Footer />
       </body>
     </html>
   )
