@@ -9,3 +9,13 @@ export interface Colors {
     redGradient: string,
   
   }
+
+  export type DataProps = {
+    phone: string[],
+    email: string,
+    cnpj: string,
+    instagram: {
+      name: string,
+      href: string;
+    }
+  }

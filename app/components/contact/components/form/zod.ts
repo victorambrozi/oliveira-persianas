@@ -22,7 +22,7 @@ export const schema = z.object({
       .string({
         required_error: "Campo obrigatório!"
       })
-      .max(150, "Excedeu a quantidade máxima de caracteres")
+      .max(300, "Excedeu a quantidade máxima de caracteres")
   })
   
   export type FormProps = z.infer<typeof schema>;
