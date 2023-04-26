@@ -51,6 +51,7 @@ const TextArea = styled.textarea`
   background: ${colors.greySix};
   border: 1px solid ${colors.greyThree};
   outline: none;
+  resize: none;
 
   color: ${colors.greyTwo};
 `;
