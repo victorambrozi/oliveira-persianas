@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import styled from 'styled-components';
 
-import { colors } from '@/app/styles/global';
+import { colors } from '@/src/app/styles/global';
 
 import { schema, FormProps } from './index';
 import { MessageError } from '../MessageError/index';

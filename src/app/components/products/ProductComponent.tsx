@@ -1,16 +1,16 @@
-import { colors } from '@/app/styles/global';
+import { colors } from '@/src/app/styles/global';
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
 // assets
-import woven from "../../../public/images/products/c-tecido__produtos.svg";
-import bVertical from "../../../public/images/products/p-vertical__produtos.svg";
-import bHorizontal from "../../../public/images/products/p-horizontal__produtos.svg";
-import special from "../../../public/images/products/l-especial__produtos.svg";
+import woven from "../../../../public/images/products/c-tecido__produtos.svg";
+import bVertical from "../../../../public/images/products/p-vertical__produtos.svg";
+import bHorizontal from "../../../../public/images/products/p-horizontal__produtos.svg";
+import special from "../../../../public/images/products/l-especial__produtos.svg";
 
 // global components styled-components
-import { Text, Subtitle } from '@/app/styles/styled/index';
+import { Text, Subtitle } from '@/src/app/styles/styled/index';
 
 const Section = styled.section`
     width: 100%;

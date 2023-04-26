@@ -5,8 +5,8 @@ import { BiTargetLock } from "react-icons/bi";
 import Slider from '../Slider/index';
 
 // global components styled-components
-import { colors } from '@/app/styles/global';
-import { Subtitle } from '@/app/styles/styled/index';
+import { colors } from '@/src/app/styles/global';
+import { Subtitle } from '@/src/app/styles/styled/index';
 
 
 

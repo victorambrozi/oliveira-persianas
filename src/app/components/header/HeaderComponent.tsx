@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
-import { colors } from '@/app/styles/global';
+import { colors } from '@/src/app/styles/global';
 import { usePathname } from "next/navigation"
 import Image from 'next/image';
 
 // assets
-import logo from "../../../public/images/logo.svg";
+import logo from "../../../../public/images/logo.svg";
 
 
 const Wrapper = styled.header<{ display: string }>`

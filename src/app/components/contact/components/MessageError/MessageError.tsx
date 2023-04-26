@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { MdOutlineErrorOutline } from "react-icons/md";
 
-import { Text } from '@/app/styles/styled';
-import { colors } from '@/app/styles/global';
+import { Text } from '@/src/app/styles/styled';
+import { colors } from '@/src/app/styles/global';
 
 const Container = styled.div`
     padding: 0.5rem;

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaInstagram } from 'react-icons/fa';
 import { Form } from './components/form/index';
-import type { DataProps } from '@/app/@types/colors';
+import type { DataProps } from '@/src/app/@types/colors';
 
-import { Subtitle, Text } from '@/app/styles/styled/index';
-import { colors } from '@/app/styles/global';
+import { Subtitle, Text } from '@/src/app/styles/styled/index';
+import { colors } from '@/src/app/styles/global';
 import Link from 'next/link';
 
 const Section = styled.section`

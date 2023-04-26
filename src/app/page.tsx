@@ -7,9 +7,9 @@ import Image from "next/image";
 
 // assets
 import { FaAngleDoubleDown } from 'react-icons/fa'
-import cepe from "../public/images/clientsLogo/logo-cepe.svg"
-import andes from "../public/images/clientsLogo/logo-andes.svg"
-import faeb from "../public/images/clientsLogo/logo-faeb.svg"
+import cepe from "../../public/images/clientsLogo/logo-cepe.svg"
+import andes from "../../public/images/clientsLogo/logo-andes.svg"
+import faeb from "../../public/images/clientsLogo/logo-faeb.svg"
 
 // global components styled-components
 import { colors, sansFont, serifFont } from "./styles/global";

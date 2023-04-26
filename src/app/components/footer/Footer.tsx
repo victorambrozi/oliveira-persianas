@@ -1,6 +1,6 @@
 "use client";
-import { colors } from '@/app/styles/global';
-import { Text } from '@/app/styles/styled';
+import { colors } from '@/src/app/styles/global';
+import { Text } from '@/src/app/styles/styled';
 import Link from 'next/link';
 import React from 'react';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
