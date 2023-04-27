@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Contact = () => {
+const About = () => {
   return (
-    <div>Contact</div>
+    <div style={{height: '1400px'}}>About</div>
   )
 }
 
-export default Contact
+export default About;

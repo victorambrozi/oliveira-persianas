@@ -41,7 +41,6 @@ const Title = styled.h1`
   font-weight: 700;
 
   color: ${colors.greyTwo};
-
 `;
 
 const Icon = styled.div`

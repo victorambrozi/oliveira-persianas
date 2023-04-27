@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { createGlobalStyle } from 'styled-components';
 import { IBM_Plex_Serif, IBM_Plex_Sans } from "next/font/google";
 import { Colors } from '../@types/colors';

@@ -63,7 +63,7 @@ const HeaderComponent = () => {
   const handleScrollHeader = () => {
     const windowScrollY = window.scrollY;
 
-    if (path != '/') {
+    if (path != '/' && path != '/#services') {
       setDisplayHeader('flex');
       setShowheader(true);
     } else {

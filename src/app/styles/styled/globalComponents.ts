@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { serifFont, sansFont } from "../global";
 
 export const Subtitle = styled.h2 < { color: string }> `
-  font-size: clamp(3.6rem, 1vw, 14rem);
+  font-size: clamp(1.6rem, 2.5vw, 3.6rem);
   font-weight: 600;
   font-family: ${serifFont.style.fontFamily};
   color: ${({ color }) => color};
