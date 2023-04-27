@@ -26,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.10%;
-    font-family: ${sansFont.style.fontFamily}
+    font-family: ${sansFont.style.fontFamily};
+    scroll-behavior: smooth;
   }
 
   a {

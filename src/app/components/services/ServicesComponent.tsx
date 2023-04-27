@@ -50,10 +50,10 @@ const Button = styled.div`
 `;
 
 
-const ServicesComponent = () => {
+const ServicesComponent = ({ id }: { id: string }) => {
 
   return (
-    <Section>
+    <Section id={id}>
       <Subtitle color={colors.greySix}> Serviços </Subtitle>
       <Services />
       <Carrousel>

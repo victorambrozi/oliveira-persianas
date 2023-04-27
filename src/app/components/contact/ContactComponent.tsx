@@ -20,8 +20,9 @@ const Content = styled.section`
     margin-top: 6rem;
 
     display: flex;
-    justify-content: center;
-    gap: 8rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4rem;
 `;
 const DataContact = styled.section`
 
